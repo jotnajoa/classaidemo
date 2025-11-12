@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYC Dog Names</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <button data-page="intro" class="active">Intro</button>
+      <button data-page="trend">Trend of dog names</button>
+      <button data-page="masculinity">Masculinity</button>
+      <button data-page="neighborhoods">Neighborhoods</button>
+    </nav>
+  </header>
+
+  <main>
+   <section id="intro" class="active">
+  <div class="intro-grid">
+    <div class="intro-media">
+      <img src="./nycmap.png" alt="Illustrated NYC map">
+    </div>
+
+    <div class="intro-copy">
+      <h1>Is there a trend of dog names? If any, what is it like?</h1>
+      <p class="lede">
+        This project explores how dog name trends change over time in NYC.
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="link-row">
+    <a class="chip" target="_blank" href="https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp/about_data">NYC open data</a>
+    <a class="chip" target="_blank" href="https://www.newschool.edu/parsons/bba-design-management/">Parsons</a>
+    <a class="chip" target="_blank" href="https://www.newschool.edu/parsons/faculty/seungyu-paik/">Soonk's class</a>
+  </div>
+</section>
+
+
+    <section id="trend">
+  <h1>Trend of dog names</h1>
+
+  <!-- controls -->
+  <div class="trend-controls">
+    <div id="trend-legend" class="legend-chips"></div>
+  </div>
+
+  <!-- chart -->
+  <div id="trend-chart" class="chart-wrap">
+    <!-- SVG injected by D3 -->
+  </div>
+
+  <!-- summary -->
+  <div id="trend-summary" class="summary-box"></div>
+
+    </section>
+
+    <section id="masculinity">
+      <h1>Masculinity</h1>
+      <p>Exploring gendered naming trends in NYC dogs.</p>
+    </section>
+
+    <section id="neighborhoods">
+      <h1>Neighborhoods</h1>
+      <p>How do dog names differ across neighborhoods?</p>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
